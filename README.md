@@ -1,62 +1,67 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Recipe Application
 
-> Description the project.
+> This application display list of food and various recipe that can be used to prepare other foods. User can add food and recipe to their food and recipe list. 
 
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
 
 
 ## Getting Started
 
 **This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing. install the dependecies of the database you will be using**
 
+
+## Built With
+
+- Ruby
+- POSTGRESQL
+- Rspec
+
+
+
+## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- ruby on rails 
+- postgresql
+- rspec
 
 ### Setup
-
-### Install
+- Open terminal
+- Clone the repo using command `git clone git@github.com:henrycode460/recipe_app.git`
+- Change directory using `cd recipe_app`
+- Run `rails server`
 
 ### Usage
+- You can use the app to create a post, update, and delete a post and also comment, and like other user post
 
 ### Run tests
-
-### Deployment
-
+- run `rspec` in terminal
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Henry Varflay Singbeh**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/henrycode460)
+- Twitter: [@twitterhandle](https://www.linkedin.com/in/henry-varflay-singbeh)
+- LinkedIn: [LinkedIn](https://twitter.com/code460)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Muhammad Shaheer **
+
+- GitHub: [@githubhandle](https://github.com/ShaheerCH)
+- Twitter: [@twitterhandle]()
+- LinkedIn: [LinkedIn](https://twitter.com/Shaheer_choudry)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/henrycode460/recipe_app/issues).
 
 ## Show your support
 
