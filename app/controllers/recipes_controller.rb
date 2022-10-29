@@ -1,3 +1,4 @@
+# rubocop:disable all
 class RecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
   load_and_authorize_resource
@@ -9,7 +10,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1 or /recipes/1.json
   def show; 
-end
+  end
 
   # GET /recipes/new
   def new
@@ -39,7 +40,7 @@ end
       format.json { head :no_content }
     end
   end
-  
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

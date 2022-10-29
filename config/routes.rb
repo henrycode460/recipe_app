@@ -1,3 +1,4 @@
+# rubocop:disable all
 Rails.application.routes.draw do
   get 'general_shopping_lists/index'
   get 'public_recipes/index'
