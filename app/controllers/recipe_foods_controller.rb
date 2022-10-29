@@ -1,12 +1,12 @@
 class RecipeFoodsController < ApplicationController
   before_action :set_recipe_food, only: %i[show edit update destroy]
 
-  # GET /recipe_foods 
+  # GET /recipe_foods
   def index
     @recipe_foods = RecipeFood.all
   end
 
-  # GET /recipe_foods/1 
+  # GET /recipe_foods/1
   def show; end
 
   # GET /recipe_foods/new
@@ -17,7 +17,7 @@ class RecipeFoodsController < ApplicationController
   # GET /recipe_foods/1/edit
   def edit; end
 
-  # POST /recipe_foods 
+  # POST /recipe_foods
   def create
     @recipe_food = RecipeFood.new(recipe_food_params)
 
@@ -32,7 +32,7 @@ class RecipeFoodsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /recipe_foods/1 
+  # PATCH/PUT /recipe_foods/1
   def update
     respond_to do |format|
       if @recipe_food.update(recipe_food_params)
@@ -45,7 +45,7 @@ class RecipeFoodsController < ApplicationController
     end
   end
 
-  # DELETE /recipe_foods/1 
+  # DELETE /recipe_foods/1
   def destroy
     @recipe_food.destroy
 
