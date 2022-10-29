@@ -1,3 +1,5 @@
 class User < ApplicationRecord
-    has_many :foods, foreign_key: :user_id
-end
+    has_many :recipes
+    has_many :foods
+  end
+  
