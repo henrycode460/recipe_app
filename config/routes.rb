@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'foods/index'
+  get 'users/index'
+  devise_for :users
+  root 'users#index'
+  resources :users, only: %i[index show]
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :foods, only: %i[index show new create destroy]
+
+  get '/users/:id', to: 'users#show'
+  get '/foods/new', to: 'foods#new'
+  get '/foods/:id', to: 'foods#show'
 end
