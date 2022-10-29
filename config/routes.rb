@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   root 'foods#index'
-   
+
   resources :foods # [:index, :destroy, :new, :show]
   get '/users', to: 'foods#index'
 
