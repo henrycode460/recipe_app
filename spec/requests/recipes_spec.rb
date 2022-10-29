@@ -1,28 +1,28 @@
 require 'rails_helper'
 
 RSpec.describe Recipe, type: :request do
-  user = User.create(name: 'User1', email: 'a@com', password: 'qwerty')
+  user = User.create(name: 'User1', email: 'shah@gmail.com', password: '123456')
 
   subject { described_class.new }
   before :each do
     subject.user = user
-    subject.name = 'Rice'
-    subject.preparation_time = 5
-    subject.cooking_time = 3.5
-    subject.description = 'Boil it'
+    subject.name = 'Pizza'
+    subject.preparation_time = 50
+    subject.cooking_time = 6.9
+    subject.description = 'Bake it'
     subject.save
     sign_in user
   end
 
-  it " '/recipes' should lead to the recipe index page" do
+  it " '/recipes' leads to the recipe index page" do
     get recipes_path
     expect(response).to render_template(:index)
   end
-  it " '/recipes/new' should lead to recipe new page" do
+  it " '/recipes/new' leads to recipe new page" do
     get new_recipe_path
     expect(response).to render_template(:new)
   end
-  it " '/recipes/:id' should lead to the recipe's show page" do
+  it " '/recipes/:id' leads to the recipe's show page" do
     get recipe_path subject
     expect(response).to render_template(:show)
   end

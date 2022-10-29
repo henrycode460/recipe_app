@@ -7,19 +7,19 @@ RSpec.describe RecipeFood, type: :model do
   before :each do
     subject.recipe = recipe
     subject.food = food
-    subject.quantity = 5
+    subject.quantity = 50
   end
 
-  it 'Expect the subject to be valid' do
+  it 'Subject to be valid' do
     expect(subject).to be_valid
   end
 
-  it 'Should have quantity with numeric value ' do
+  it 'Quantity with numeric value' do
     subject.quantity = 'Three'
     expect(subject).to_not be_valid
   end
-  it 'Should have quantity greater than zero' do
-    subject.quantity = -5
+  it 'Quantity should be greater than zero' do
+    subject.quantity = -40
     expect(subject).to_not be_valid
   end
 end
