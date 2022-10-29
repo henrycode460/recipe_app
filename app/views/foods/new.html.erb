@@ -1,0 +1,23 @@
+
+<%= form_with  url: foods_path, method: :post, local: true, scope: :food do |f|  %>
+  <div>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+   <div>
+    <%= f.label :measurement_unit  %><br>
+    <%= f.text_field :measurement_unit %>
+  </div>
+   <div>
+    <%= f.label :price %><br>
+    <%= f.number_field  :price , step: 0.01, class: 'input' %>
+  </div>
+   <div>
+    <%= f.label :quantity %><br>
+    <%= f.number_field  :quantity, class: 'input' %>
+  </div>
+  
+  <div>
+    <%= f.submit "Create Food" %>
+  </div>
+<% end %>
