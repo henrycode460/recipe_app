@@ -5,26 +5,26 @@ RSpec.describe Food, type: :model do
   subject { described_class.new }
   before :each do
     subject.user = user
-    subject.name = 'burger'
+    subject.name = 'Pizza'
     subject.measurement_unit = 'gram'
-    subject.price = 5
-    subject.quantity = 'Boil it'
+    subject.price = 50
+    subject.quantity = 'Heat it'
   end
 
-  it 'Expect the subject to be valid' do
+  it 'Subject should be valid' do
     expect(subject).to be_valid
   end
 
   it 'Should have a name' do
-    subject.name = 'burger'
+    subject.name = 'Pizza'
     expect(subject).to be_valid
   end
-  it 'Should have measurement value' do
+  it 'Should have a unit' do
     subject.measurement_unit = 'gram'
     expect(subject).to be_valid
   end
-  it 'Should have price with numeric value' do
-    subject.price = '5'
+  it 'Should have price value' do
+    subject.price = '50'
     expect(subject).to be_valid
   end
   it 'Should have a quantity' do
