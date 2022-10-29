@@ -6,13 +6,16 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.where(user: current_user)
   end
+
   # GET /recipes/1 or /recipes/1.json
   def show; 
 end
+
   # GET /recipes/new
   def new
     @recipe = Recipe.new
   end
+
   # POST /recipes or /recipes.json
   def create
     @recipe = Recipe.new(recipe_params)
@@ -27,6 +30,7 @@ end
       end
     end
   end
+
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
     @recipe.destroy
@@ -35,11 +39,14 @@ end
       format.json { head :no_content }
     end
   end
+  
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_recipe
     @recipe = Recipe.find(params[:id])
   end
+
   # Only allow a list of trusted parameters through.
   def recipe_params
     params.require(:recipe).permit(:name, :preparation_time, :cooking_time, :description, :public, :user_id)
