@@ -3,7 +3,7 @@ class FoodsController < ApplicationController
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.all
+    @foods = Food.where(user_id: current_user).order(:name)
   end
 
   # GET /foods/1 or /foods/1.json
@@ -20,6 +20,7 @@ class FoodsController < ApplicationController
   # POST /foods or /foods.json
   def create
     @food = Food.new(food_params)
+    @food.user = current_user
 
     respond_to do |format|
       if @food.save
@@ -53,6 +54,7 @@ class FoodsController < ApplicationController
       format.html { redirect_to foods_url, notice: 'Food was successfully destroyed.' }
       format.json { head :no_content }
     end
+    redirect_to foods_path
   end
 
   private
