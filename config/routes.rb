@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :recipe_foods # [:index, :destroy, :new, :show]
-  resources :recipes, only: %i[:index, :destroy, :new, :create, :show]
+  resources :recipes, only: [:index, :destroy, :new, :create, :show]
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
