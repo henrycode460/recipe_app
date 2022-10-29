@@ -3,7 +3,7 @@ class FoodsController < ApplicationController
 
   # GET /foods or /foods.json
   def index
-    @foods = Food.where(user_id: current_user).order(:name)
+    @foods = Food.all
   end
 
   # GET /foods/1 or /foods/1.json
@@ -54,7 +54,6 @@ class FoodsController < ApplicationController
       format.html { redirect_to foods_url, notice: 'Food was successfully destroyed.' }
       format.json { head :no_content }
     end
-    redirect_to foods_path
   end
 
   private
